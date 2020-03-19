@@ -1,7 +1,7 @@
-##Muhammad Taufik Hidayat
-##1741720185
-##TI-3A
-##Pemograman Berbasis Web
+## Muhammad Taufik Hidayat
+## 1741720185
+## TI-3A
+## Pemograman Berbasis Web
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
