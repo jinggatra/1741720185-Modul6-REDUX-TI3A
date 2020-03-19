@@ -1,4 +1,5 @@
-import React, {Component} from 'react' import { connect } from 'react-redux';
+import React, {Component} from 'react' ;
+import { connect } from 'react-redux';
 import { addTodo } from '../actions/actionCreator';
 import {bindActionCreators} from 'redux';
 
@@ -26,7 +27,7 @@ render(){ return (
     </div>
     );
     }
-    
+
 }
 
 const mapDispatchToProps = (dispatch) => { return bindActionCreators({
