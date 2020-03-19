@@ -1,27 +1,51 @@
+// // import React from 'react';
+// // import ReactDOM from 'react-dom';
+// // import './index.css';
+// // import App from './App';
+// // import * as serviceWorker from './serviceWorker';
+
 // import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
+// import ReactDOM from 'react-dom'; 
+// import { Provider } from 'react-redux'
+// // import { createStore, applyMiddleware, compose } from 'redux' 
+// import { createStore, compose } from 'redux' 
+// import MainReducer from './reducer/MainReducer'
 // import App from './App';
+// // import registerServiceWorker from './registerServiceWorker';
 // import * as serviceWorker from './serviceWorker';
 
-import React from 'react';
-import ReactDOM from 'react-dom'; import { Provider } from 'react-redux'
-import { createStore, applyMiddleware, compose } from 'redux' 
-import MainReducer from './reducers/MainReducer'
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-const store = compose(window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)(MainReducer)
+// const store = compose(window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)(MainReducer)
 
-// ReactDOM.render(<App />, document.getElementById('root'));
+// // ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(<Provider store={store}>
-    <App />
-    </Provider>
-    , document.getElementById('root')); registerServiceWorker();
+// ReactDOM.render(<Provider store={store}>
+//     <App />
+//     </Provider>
+//     , document.getElementById('root')); 
+
+//     serviceWorker();
     
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// // If you want your app to work offline and load faster, you can change
+// // unregister() to register() below. Note this comes with some pitfalls.
+// // Learn more about service workers: https://bit.ly/CRA-PWA
+
+// serviceWorker.unregister();
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware, compose } from 'redux'
+import MainReducer from './reducer/MainReducer'
+import App from './App';
+// import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker, { register } from './serviceWorker';
+import * as serviceWorker from './serviceWorker';
+const store = compose(window.devToolsExtension ? window.devToolsExtension() : f =>
+    f)(createStore)(MainReducer)
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+// registerServiceWorker();
+// serviceWorker();
+// register();
+serviceWorker.register();
